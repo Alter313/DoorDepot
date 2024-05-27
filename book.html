@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Door - Door Depot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Door Depot</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="doors.html">Doors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Book a Door</h2>
+        <form id="booking-form">
+            <input type="hidden" id="door-name" name="doorName">
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Door Depot</p>
+    </footer>
+    <script>
+        // Populate the door name field from URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const doorName = urlParams.get('door');
+        document.getElementById('door-name').value = doorName;
+
+        // Handle form submission
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert(`Booking submitted for ${doorName}! We will contact you shortly.`);
+            // Here you can add code to send the booking information to your server
+        });
+    </script>
+</body>
+</html>
