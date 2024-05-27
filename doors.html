@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doors - Door Depot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Door Depot</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="doors.html">Doors</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Our Doors</h2>
+        <div class="door-item">
+            <h3>Modern Door</h3>
+            <p>Price: $300</p>
+            <button onclick="openDescription('modern-door')">More Information</button>
+            <button onclick="window.location.href='book.html?door=Modern Door'">Book</button>
+        </div>
+        <div class="door-item">
+            <h3>Classic Door</h3>
+            <p>Price: $250</p>
+            <button onclick="openDescription('classic-door')">More Information</button>
+            <button onclick="window.location.href='book.html?door=Classic Door'">Book</button>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Door Depot</p>
+    </footer>
+</body>
+</html>
